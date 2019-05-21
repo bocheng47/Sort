@@ -22,14 +22,14 @@ public class SortingVisualizer {
 	}
 	
 	public static void resetArray(){
-		// «Ø¥ß¤@­Ósorted Array ¡Aªø«×µ¥©ó¨Ï¥ÎªÌ©Ò¿ïªº­È
+		// å»ºç«‹ä¸€å€‹sorted Array ï¼Œé•·åº¦ç­‰æ–¼ä½¿ç”¨è€…æ‰€é¸çš„å€¼
 		toBeSorted = new Integer[sortDataCount];
 		blockWidth = (int) Math.max(Math.floor(500/sortDataCount), 1);
 		for(int i = 0; i<toBeSorted.length; i++){
 			toBeSorted[i] = i;
 		}
 			
-		// ¥´¶Ã¦¹ array (¶i¦æshuffle)
+		// æ‰“äº‚æ­¤ array (é€²è¡Œshuffle)
 		ArrayList<Integer> shuffleThis = new ArrayList<>();
 		for (int i = 0; i < toBeSorted.length; i++) {
 			shuffleThis.add(toBeSorted[i]);
@@ -60,10 +60,6 @@ public class SortingVisualizer {
 
 			case "Insertion":
 				sortingThread = new Thread(new InsertionSort(toBeSorted, frame, false));
-				break;
-				
-			case "Merge":
-				sortingThread = new Thread(new MergeSort(toBeSorted, frame));
 				break;
 				
 			case "Bubble(fast)":
